@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service Greeter {
+  rpc Send (Request) returns (Response) {}
+}
+message Request {
+        bytes req_content = 1;
+}
+
+message Response {
+		string resp_content = 1;
+}
+

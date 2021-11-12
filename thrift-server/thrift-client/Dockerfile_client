@@ -1,0 +1,8 @@
+FROM python:3.7-alpine as base
+
+ADD . /
+WORKDIR image
+RUN python -m pip install --upgrade pip
+RUN pip install thrift 
+EXPOSE 9090
+CMD ["python","client.py","100"]
